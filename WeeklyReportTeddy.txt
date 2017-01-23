@@ -1,0 +1,200 @@
+20170109-20170113
+本周完成：
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：
+	2.1. 新加入vPM_48VShutdownSet/Get，vPM_48VStartupSet/Get等4个APIs
+	2.2. 为新加入的APIs写好测试程序。（新加入的8个api和2个修改过的关联api）
+	2.3. fix GPS module set/get bug
+	2.4. 根据david20161121的email修改VT1250上communication相关的16个API逻辑。
+    3. EAPI：
+	3.1 
+    4. 其他：
+	1. VT1250/ITX硬件安装调试
+ 
+下周计划：20170116-20170120
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：	
+	2.1 
+    3. EAPI：
+	3.1 
+
+遗留问题：（关注那些engineer认为需要花时间做但是客户或者PM并没有安排任务或者被延后的问题）
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 Vehicle中的类没有实现getLastErrorNumber(),也就是说此类所有接口都没有实现定义和登记error number，与其他所有类编程风格不一致。是否需要增加，如需要，对应文档也需要更新？
+	1.2 Sensor and location 部分因为当初OS不支持导致停滞后来TPE再没有安排resource回到此项目。需要先理清。
+	1.3 根据jason20170106发的mail中提及的vehicle vVS_VechicleEngineCoolantAndFuelTemperature API 返回false的bug进行vehicle相关代码study的debug。（注：之前这部分代码不是我写的，我需要时间理解代码和其意义。
+    2. VMC SDK for Windows：
+	2.1 根据david讨论指示，VT1250结束后抽时间完成VMC SDK迁移到新的SDK接口。（对外部分）
+    3. EAPI：
+	3.1 EAPI study smartfan 控制部分的datasheet 实现smartfan的控制APIs。（一直有更优先的事情在前面没有推进）
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+20170103-20170106
+本周完成：
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：
+	2.1. vPM_InputVoltageSet/Get 函數對中的輸入/輸出其中的原有36輸入和36輸出意義由於EC的更改現在更改為9，表示寬範圍輸入電壓(也就是原有9-36v為寬電壓，現在為9-60v叫寬電壓。（GUI必須修改相應地方，否則會出錯）
+	2.2. vPM_InputVoltageSet/Get 增加36，48兩個輸入/輸出支持，分別代表36v和48v。（注意原有36v代表寬電壓現已經更改為9）
+	2.3. vPM_ACCSenseModeSetting/vPM_ACCSenseModeGetting APIs logical calculation error fixed. (bug 5)
+	2.4. vPM_PowerButtonGetting/vPM_PowerButtonSetting APIs logical calculation error fixed. (bug 5)
+	2.5. 新加入vPM_36VShutdownSet/Get，vPM_36VStartupSet/Get等4个APIs。
+    3. EAPI：
+	3.1 
+    4. 其他：
+	1. VT1250/ITX硬件安装调试
+ 
+下周计划：20170109-20170113
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：	
+	2.1. 新加入vPM_48VShutdownSet/Get，vPM_48VStartupSet/Get等4个APIs
+	2.2. 为新加入的APIs写好测试程序。（新加入的8个api和2个修改过的关联api）
+	2.3. 进一步测试和分析buglist中的bug
+    3. EAPI：
+	3.1 
+
+遗留问题：（关注那些engineer认为需要花时间做但是客户或者PM并没有安排任务或者被延后的问题）
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 Vehicle中的类没有实现getLastErrorNumber(),也就是说此类所有接口都没有实现定义和登记error number，与其他所有类编程风格不一致。是否需要增加，如需要，对应文档也需要更新？
+	1.2 Sensor and location 部分因为当初OS不支持导致停滞后来TPE再没有安排resource回到此项目。需要先理清。
+	1.3 根据jason20170106发的mail中提及的vehicle vVS_VechicleEngineCoolantAndFuelTemperature API 返回false的bug进行vehicle相关代码study的debug。（注：之前这部分代码不是我写的，我需要时间理解代码和其意义。
+    2. VMC SDK for Windows：
+	2.1 根据david讨论指示，VT1250结束后抽时间完成VMC SDK迁移到新的SDK接口。（对外部分）
+    3. EAPI：
+	3.1 EAPI study smartfan 控制部分的datasheet 实现smartfan的控制APIs。（一直有更优先的事情在前面没有推进）
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+20161226-20161230
+本周完成：
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：
+	（针对upanel 1.0.5-15 for vt1250的buglist添加bug对应测试程序）	
+	2.1 bug对应分析测试程序补全
+	2.2 对vt1020/1250模块battery 剩余电量计算根据warrenhg邮件修改新的算法。
+    3. EAPI：
+	3.1 
+ 
+下周计划：
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：	
+	2.1 实现36V/48V 输入电压的APIs(vt1250)
+    3. EAPI：
+	3.1 
+
+遗留问题：（关注那些engineer认为需要花时间做但是客户或者PM并没有安排任务或者被延后的问题）
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 Vehicle中的类没有实现getLastErrorNumber(),也就是说此类所有接口都没有实现定义和登记error number，与其他所有类编程风格不一致。是否需要增加，如需要，对应文档也需要更新？
+	1.2 Sensor and location 部分因为当初OS不支持导致停滞后来TPE再没有安排resource回到此项目。需要先理清。
+    2. VMC SDK for Windows：
+	2.1 根据david讨论指示，VT1250结束后抽时间完成VMC SDK迁移到新的SDK接口。（对外部分）
+    3. EAPI：
+	3.1 EAPI study smartfan 控制部分的datasheet 实现smartfan的控制APIs。（一直有更优先的事情在前面没有推进）
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+20161219-20161223
+本周完成：
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 完成其他class（digtalIO，vehicle)文档补全工作。
+    2. Baytrialseries SDK for Windows：
+	（针对upanel 1.0.5-15 for vt1250的buglist添加bug对应测试程序）
+	2.1  remove SDKGUITEST project which is discarded.
+	2.2. add postscript for all 64bit release generating process.
+	2.3. implement a test app for bug21-(UPSBattery read fail).
+	2.4. add bugACCSensorGetSet test code for debug use.
+	2.5. add bugPowerButtonSettingGetting test code for debug use.
+	2.6. add communication bug15,16 test code.
+	2.7. add wake On RTC bug17 test code.
+	2.8. add GPS module detect bug20 test code.
+
+
+
+    3. EAPI：
+	3.1 
+ 
+下周计划：20161226-20161230
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 
+    2. Baytrialseries SDK for Windows：
+	（针对upanel 1.0.5-15 for vt1250的buglist添加bug对应测试程序）	
+	2.1 bug对应分析测试程序补全
+	2.2 新功能实现。
+    3. EAPI：
+	3.1 压后
+
+遗留问题：（关注那些engineer认为需要花时间做但是客户或者PM并没有安排任务或者被延后的问题）
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 Vehicle中的类没有实现getLastErrorNumber(),也就是说此类所有接口都没有实现定义和登记error number，与其他所有类编程风格不一致。是否需要增加，如需要，对应文档也需要更新？
+	1.2 Sensor and location 部分因为当初OS不支持导致停滞后来TPE再没有安排resource回到此项目。需要先理清。
+    2. Baytrialseries SDK for Windows：
+	）
+    3. EAPI：
+	3.1 EAPI study smartfan 控制部分的datasheet 实现smartfan的控制APIs。（一直有更优先的事情在前面没有推进）
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+20161212-20161216
+本周完成：
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 完成overall document 添加sample code 片段和update lib给客人先行使用。
+	1.2 完成CCommunicationSettings class 文档。
+	1.3 完成CDeviceInformation 和 CSensorAndLocation文档。
+    2. Baytrialseries SDK for Windows：
+	2.1 
+    3. EAPI：
+	3.1 压后
+ 
+下周计划：20161219-20161223
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 完成其他class的文档工作。
+    2. Baytrialseries SDK for Windows：
+	2.1 Baytrailseries SDK for Windows on VT1250 上的修改（根据1209的email），目前有疑问需要david澄清和进一步指示（根据201612121057的mail他会随后说清
+    3. EAPI：
+	3.1 压后
+
+遗留问题：（关注那些engineer认为需要花时间做但是客户或者PM并没有安排任务或者被延后的问题）
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 Vehicle中的类没有实现getLastErrorNumber(),也就是说此类所有接口都没有实现定义和登记error number，与其他所有类编程风格不一致。是否需要增加，如需要，对应文档也需要更新？
+	1.2 Sensor and location 部分因为当初OS不支持导致停滞后来TPE再没有安排resource回到此项目。需要先理清。
+    2. Baytrialseries SDK for Windows：
+	）
+    3. EAPI：
+	3.1 EAPI study smartfan 控制部分的datasheet 实现smartfan的控制APIs。（一直有更优先的事情在前面没有推进）
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+20161205-20161209
+本周完成：
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 修正FIC关键字修改带来的bugs。
+	1.2 完成BaytrailSeriesSDKForAndroidQuickStart.pdf文档。
+    2. Baytrialseries SDK for Windows：
+	2.1 
+    3. EAPI：
+	3.1 完成EAPI Watchdog develop guide for app engineer 文档工作
+ 
+下周计划：20161212-20161216
+    1. Baytrailseries SDK for Windows on VT1250 上的修改（根据1209的email）
+    2. Baytrailseries SDK for android 剩余几个类的文档补全。
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+20161128-20161202
+本周完成：
+    1. MT7000 SDK for android：
+	1.1 实现digtalIO APIs.
+	1.2 实现digtal test/sample program.
+	1.3 写digtalIO APIs文档。
+    2. MT7000 SDK for Windows：
+	2.1 实现设置brightness 测试程序	
+    3. EAPI：
+	3.1 实现cpufan的开/关/手动PWM部分api。
+ 
+下周计划：20161205-20161209
+    1. MT7000 SDK for android FIC关键字修改测试（计划20161205下午左右完成）
+    1. EAPI study smartfan 控制部分的datasheet 实现smartfan的控制APIs。
+
+关于BUGlist：
+    1. VT1250 部分bug，由于baytrail Series SDK for windows 版本统一，其他平台上没有的bug在此平台上出现基本由于硬件和EC的改变引起，根据buglist均无法推断出是SDK的问题（目前也没有时间和足够条件-VT1250硬件基本无法开机，做进一步验证。
+    
