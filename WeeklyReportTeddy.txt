@@ -1,3 +1,67 @@
+20170123-20170126
+本周完成：
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：
+	2.1. smart fan spec study.(not completed, will contiue to 2.10)
+    3. EAPI：
+	3.1 
+    4. 其他：
+	1. VT1250/ITX硬件安装调试
+ 
+下周计划：20170206-20170210
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：	
+	2.1 
+    3. EAPI：
+	3.1 
+
+遗留问题：（关注那些engineer认为需要花时间做但是客户或者PM并没有安排任务或者被延后的问题）
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 Vehicle中的类没有实现getLastErrorNumber(),也就是说此类所有接口都没有实现定义和登记error number，与其他所有类编程风格不一致。是否需要增加，如需要，对应文档也需要更新？
+	1.2 Sensor and location 部分因为当初OS不支持导致停滞后来TPE再没有安排resource回到此项目。需要先理清。
+	1.3 根据jason20170106发的mail中提及的vehicle vVS_VechicleEngineCoolantAndFuelTemperature API 返回false的bug进行vehicle相关代码study的debug。（注：之前这部分代码不是我写的，我需要时间理解代码和其意义。
+    2. VMC SDK for Windows：
+	2.1 根据david讨论指示，VT1250结束后抽时间完成VMC SDK迁移到新的SDK接口。（对外部分）
+    3. EAPI：
+	3.1 EAPI study smartfan 控制部分的datasheet 实现smartfan的控制APIs。（一直有更优先的事情在前面没有推进）
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+20170116-20170120
+本周完成：
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：
+	2.1. add VT1220 support in vDI_ModelType API.
+	2.2. add new logic for vt1220&vt1250 in this API. vDI_SystemPCBVersion
+	2.3. fix GPS module set/get bug
+	2.4. fix simcard detection related bugs(25,32)。
+    3. EAPI：
+	3.1 
+    4. 其他：
+	1. VT1250/ITX硬件安装调试
+ 
+下周计划：20170123-20170126
+    1. VMC SDK for android On MT7000：
+	1.1 
+    2. VMC SDK for Windows：	
+	2.1 
+    3. EAPI：
+	3.1 
+
+遗留问题：（关注那些engineer认为需要花时间做但是客户或者PM并没有安排任务或者被延后的问题）
+    1. Baytrialseries SDK for android On MT7000：
+	1.1 Vehicle中的类没有实现getLastErrorNumber(),也就是说此类所有接口都没有实现定义和登记error number，与其他所有类编程风格不一致。是否需要增加，如需要，对应文档也需要更新？
+	1.2 Sensor and location 部分因为当初OS不支持导致停滞后来TPE再没有安排resource回到此项目。需要先理清。
+	1.3 根据jason20170106发的mail中提及的vehicle vVS_VechicleEngineCoolantAndFuelTemperature API 返回false的bug进行vehicle相关代码study的debug。（注：之前这部分代码不是我写的，我需要时间理解代码和其意义。
+    2. VMC SDK for Windows：
+	2.1 根据david讨论指示，VT1250结束后抽时间完成VMC SDK迁移到新的SDK接口。（对外部分）
+    3. EAPI：
+	3.1 EAPI study smartfan 控制部分的datasheet 实现smartfan的控制APIs。（一直有更优先的事情在前面没有推进）
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 20170109-20170113
 本周完成：
     1. VMC SDK for android On MT7000：
