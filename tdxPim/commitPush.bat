@@ -1,4 +1,4 @@
-"D:\Program Files (x86)\通达信\T0002" "T0002\" /y /e /h
+xcopy "D:\Program Files (x86)\通达信\T0002" "T0002\" /y /e /h
 
 git add -A
 git commit -m"commit"
