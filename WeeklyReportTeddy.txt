@@ -1,5 +1,5 @@
  20171130：
- david要求support VM521 sdk
+ david要求support VM521 sdk大约到2017.12.12
  20171128：
  1. mt7010 修正bug需要用几天。（3天）
  20171114：
